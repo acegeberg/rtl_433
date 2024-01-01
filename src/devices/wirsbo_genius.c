@@ -40,7 +40,6 @@
 
 #define NUM_BYTES 10	// Output contains 21 nibbles, but skip first nibble 0xE, as it is not part of CRC and to get byte alignment
 static const uint8_t HEADER[] = { 0x36, 0x94 };	// Encoded prefix. Full prefix is 3 nibbles => 18 bits (but checking 16 is ok)
-static const uint16_t CRC_POLY = 0x1021;
 
 
 // Mapping from 6 bits to 4 bits
@@ -155,7 +154,7 @@ static int wirsbo_genius_callback(r_device* decoder, bitbuffer_t* bitbuffer)
 }
 
 
-static char *output_fields[] = {
+static char const *const output_fields[] = {
 	"model",
 	"id",
 	"temperature_C",
