@@ -263,6 +263,7 @@ add_library(r_433 STATIC
     devices/x10_rf.c
     devices/x10_sec.c
     devices/yale_hsa.c
+    devices/wirsbo_genius.c
 )
 
 if("${CMAKE_C_COMPILER_ID}" STREQUAL "GNU" OR "${CMAKE_C_COMPILER_ID}" MATCHES "Clang")
